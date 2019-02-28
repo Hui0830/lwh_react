@@ -1,0 +1,21 @@
+.doc-nav{
+    li {
+        list-style: none;
+        a {
+            display: block;
+            color: #455a64;
+            font-size: 14px;
+            padding: 13px 20px 13px 40px;
+            text-decoration: none;
+            &.block-title {
+                font-weight: 700;
+                cursor: default;
+            }
+            &.active {
+                color: #3498db;
+                background-color: #f5f7fa;
+            }
+        }
+    }
+}
+    
