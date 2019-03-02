@@ -9,36 +9,46 @@ import navConfig from '../nav_config';
 const Routers = () => (
     <Switch>
         {/**  REPLACE MARKDOWN */}
-        <Route path='/' exact render={() => <Redirect to={navConfig.markdown[0].path} />} />
+        <Route exact
+            path="/"
+            render={() => <Redirect to={navConfig.markdown[0].path} />}
+        />
         <Route
-            path= '/markdown/develop'
             component={Loadable({
                 loader: () => import('markdown/develop.md'),
                 loading: Loading
             })}
+            path="/markdown/develop"
         />
         <Route
-            path= '/markdown/about'
             component={Loadable({
                 loader: () => import('markdown/about.md'),
                 loading: Loading
             })}
+            path="/markdown/about"
         />
         <Route
-            path= '/markdown/log'
             component={Loadable({
                 loader: () => import('markdown/log.md'),
                 loading: Loading
             })}
+            path="/markdown/log"
         />
         {/**  REPLACE MARKDOWN */}
-        
+
             <Route
-                path= '/packages/block'
                 component={Loadable({
                     loader: () => import('packages/block/demo/index'),
                     loading: Loading
                 })}
+                path="/packages/block"
+            />
+            <Route
+                component={Loadable({
+                    loader: () => import('packages/button/demo/index'),
+                    loading: Loading
+                })}
+                path="/packages/button"
             />
     </Switch>
 )

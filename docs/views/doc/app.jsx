@@ -11,10 +11,14 @@ const App = () => {
     return (
         <HashRouter>
             <div className="doc-app">
-                <div id="doc-app-left" className="doc-app-left">
+                <div className="doc-app-left"
+                    id="doc-app-left"
+                >
                     <DocNav />
                 </div>
-                <div id="doc-app-doc" className="doc-app-doc">
+                <div className="doc-app-doc"
+                    id="doc-app-doc"
+                >
                     <Routers />
                 </div>
             </div>

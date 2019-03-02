@@ -15,8 +15,9 @@ const Nav = () => {
             {
                 navConfig.markdown.map((item) => {
                     return <li key={item.name}>
-                            <NavLink 
+                            <NavLink
                                 to={item.path}
+
                             >
                                 {item.name || '---'}
                             </NavLink>
@@ -29,8 +30,9 @@ const Nav = () => {
             {
                 navConfig.packages.map((item) => {
                     return <li key={item.name}>
-                        <NavLink 
+                        <NavLink
                             to={item.path}
+                            // replace
                         >
                             {item.name || '---'}
                         </NavLink>

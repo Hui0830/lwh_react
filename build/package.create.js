@@ -20,6 +20,7 @@ const replaceContent = () => {
             path.join(packagePath, 'index.scss'),
             path.join(packagePath, 'demo/index.jsx'),
             path.join(packagePath, 'demo/index.md'),
+            path.join(packagePath, 'demo/index.scss'),
         ],
         from: [/lwh_name/g, /lwh_upperName/g],
         to: [name, upperName],

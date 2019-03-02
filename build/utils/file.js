@@ -30,4 +30,5 @@ const fileContentCopyAndreplace = (source_dir, dist_dir, replace_str, new_str) =
 module.exports = {
     getHasDemoPackages,
     fileContentCopyAndreplace,
+    isDir
 };
