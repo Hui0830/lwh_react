@@ -1,3 +1,64 @@
-.lwh-pirate-button {
-
+@import '../var.scss';
+.lwh-pirate-btn {
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    height: 32px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: rgba(0,0,0,0.65);
+    background-color: $c-white;
+    border-color: $c-border;
+    &:hover {
+        color: $c-theme;
+        border-color: $c-theme;
+    }
+    transition: all .2s ease-in-out
+}
+.lwh-btn-small {
+    height: 24px;
+    padding: 0 7px;
+}
+.lwh-btn-large {
+    height: 40px;
+    font-size: 16px;
+}
+.lwh-btn-primary {
+    color: #fff;
+    background-color: $c-theme-weight;
+    border-color: $c-theme-weight;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.045);
+    &:hover {
+        background-color: $c-theme;
+        border-color: $c-theme;
+        color: #fff;
+    }
+}
+.lwh-btn-dashed {
+    border-style: dashed;
+}
+.lwh-btn-danger {
+    color: $c-danger;
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+    &:hover {
+        background-color: $c-danger;
+        color: #fff
+    }
+}
+.lwh-btn-ghost {
+    background-color: transparent;
+    &:hover {
+        background-color: transparent;
+    }
+}
+.lwh-btn-block {
+    width: 100%
 }

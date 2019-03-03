@@ -7,30 +7,59 @@ import './index.scss'
 import Button from '../index';
 
 const Code = () => {
-    return <div className='code-container'>
+    return <div className="code-container">
         <p className="code-title">这里是代码的展示</p>
         <code>
         {`
         <div>
-            这里是头部主内容，用于展示组件效果
-            <Button />
+            按钮类型：
+            <Button>default</Button>
+            <Button type="primary">primary</Button>
+            <Button type="dashed">dashed</Button>
+            <Button type="danger">danger</Button>
+        </div>
+        <div>
+            按钮大小：
+            <Button size="small">small</Button>
+            <Button>default</Button>
+            <Button type="large">large</Button>
+        </div>
+        <div>
+            其他：
+            <Button type="primary" ghost style={{color: '#e85e83'}}>ghost</Button>
+            <Button block type="primary" >block</Button>
         </div>
         `}
         </code>
     </div>
 }
 
+// eslint-disable-next-line react/no-multi-comp
 const ButtonDemo = () => (
-    <div className='button-demo'>
+    <div className="button-demo">
         {/* 内容书写，以Block模块形式 */}
         <Block
+            discript="按钮有四种类型：主按钮、默认按钮、虚线按钮、危险按钮。"
             meta={<Code />}
-            title='组件效果展示'
-            discript='block组件用于文档库代码的演示'
+            title="使用展示"
         >
             <div>
-                这里是头部主内容，用于展示组件效果
-                <Button />
+                按钮类型：
+                <Button>default</Button>
+                <Button type="primary">primary</Button>
+                <Button type="dashed">dashed</Button>
+                <Button type="danger">danger</Button>
+            </div>
+            <div>
+                按钮大小：
+                <Button size="small">small</Button>
+                <Button>default</Button>
+                <Button type="large">large</Button>
+            </div>
+            <div>
+                其他：
+                <Button type="primary" ghost style={{color: '#e85e83'}}>ghost</Button>
+                <Button block type="primary" >block</Button>
             </div>
         </Block>
         {/* 内容书写，以Block模块形式 */}

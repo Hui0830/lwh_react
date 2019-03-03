@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import "./index.scss";
+import './index.scss';
 
 class Block extends React.PureComponent {
     static propTypes = {
         meta: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.element,
-            PropTypes.node,
+            PropTypes.node
           ]),
         name: PropTypes.string,
         title: PropTypes.string,
         discript: PropTypes.string,
-        className: PropTypes.string,
+        className: PropTypes.string
     }
     static defaultProps = {
         meta: <div>meta</div>,
@@ -25,7 +25,7 @@ class Block extends React.PureComponent {
     }
     state = {
         show: false,
-        metaHeight: 0,
+        metaHeight: 0
     }
     controlShowHandle = () => {
         this.setState({
@@ -44,7 +44,7 @@ class Block extends React.PureComponent {
                     <div className="lwh-block-source">
                         {children || '未设置组件内容'}
                     </div>
-                    <div className={`lwh-block-meta`} style={{height: (show ? metaHeight : 0)}}>
+                    <div className={'lwh-block-meta'} style={{height: (show ? metaHeight : 0)}}>
                         <div ref={this.meta}>{meta}</div>
                     </div>
                     <div className={`lwh-block-control ${show ? 'lwh-block-close' : ''}`} onClick={this.controlShowHandle}>

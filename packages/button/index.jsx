@@ -1,13 +1,20 @@
 import React from 'react';
-import Btn from './button';
-import "./index.scss";
+import './index.scss';
 
-const Button = () => {
+const Button = ({disabled,type,htmlType,size,onClick,block,ghost,children,style }) => {
+    let className = `lwh-pirate-btn ${block ? 'lwh-btn-block' : ''} ${ghost ? 'lwh-btn-ghost' : ''}`;
+    type && (className += ` lwh-btn-${type}`);
+    size && (className += ` lwh-btn-${size}`);
     return (
-        <div className="lwh-pirate-button">
-            Button
-            <Btn />
-        </div>
+        <button
+            className={className}
+            disabled={disabled}
+            onClick={onClick}
+            style={style}
+            type={htmlType}
+        >
+            {children}
+        </button>
     )
 }
 export default Button

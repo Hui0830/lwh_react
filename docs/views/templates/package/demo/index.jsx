@@ -6,7 +6,7 @@ import './index.scss'
 import lwh_upperName from '../index';
 
 const Code = () => {
-    return <div className='code-container'>
+    return <div className="code-container">
         <p className="code-title">这里是代码的展示</p>
         <code>
         {`
@@ -18,14 +18,14 @@ const Code = () => {
         </code>
     </div>
 }
-
+// eslint-disable-next-line
 const lwh_upperNameDemo = () => (
-    <div className='lwh_name-demo'>
+    <div className="lwh_name-demo">
         {/* 内容书写，以Block模块形式 */}
         <Block
             meta={<Code />}
-            title='组件效果展示'
-            discript='block组件用于文档库代码的演示'
+            title="组件效果展示"
+            discript="block组件用于文档库代码的演示"
         >
             <div>
                 这里是头部主内容，用于展示组件效果
