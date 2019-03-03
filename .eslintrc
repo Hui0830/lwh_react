@@ -17,7 +17,8 @@
     "globals": {
         "System": true,
         "document": true,
-        "module": true
+        "module": true,
+        "require": true
     },
     "rules": {
         "quotes": [2, "single"],

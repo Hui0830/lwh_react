@@ -71,7 +71,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,
-            chunks: ['doc'],
+            chunks: ['manifest', 'vendor','doc'],
             filename: 'index.html',
             template: path.join(__dirname, "../docs/views/doc.html"),
             inject: 'body',
