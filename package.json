@@ -6,7 +6,7 @@
     "lib"
   ],
   "scripts": {
-    "start": "rm -rf lib && npm run build:server && npm run serve",
+    "start": "rm -rf lib && npm run build:server && npm run server",
     "dev": "webpack-dev-server --progress --colors --profile --config build/webpack.config.dev.js",
     "build:server": "webpack --progress --colors --profile --config build/webpack.config.prod.js",
     "server": "node docs/server/server.run.js",

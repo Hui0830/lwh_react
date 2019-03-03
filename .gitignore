@@ -3,4 +3,3 @@ docs/dist*
 node_modules*
 .cache-loader*
 .vscode*
-lib/
