@@ -17,6 +17,6 @@ export default {
         /**  REPLACE MARKDOWN */
     ],
     packages: [
-        { name: 'block', path: '/packages/block' },{ name: 'button', path: '/packages/button' }
+        { name: 'block', path: '/packages/block' },{ name: 'button', path: '/packages/button' },{ name: 'spin', path: '/packages/spin' }
     ]
 };

@@ -41,7 +41,7 @@ class Block extends React.PureComponent {
                 {title && <h3>{title}</h3>}
                 {discript && <p>{discript}</p>}
                 <div className={`lwh-pirate-block-container ${className}`}>
-                    <div className="lwh-block-source">
+                    <div className="lwh-block-source" ref={this.child}>
                         {children || '未设置组件内容'}
                     </div>
                     <div className={'lwh-block-meta'} style={{height: (show ? metaHeight : 0)}}>

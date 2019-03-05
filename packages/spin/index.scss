@@ -1,0 +1,106 @@
+@import '../var.scss';
+.lwh-pirate-spin {
+    position: relative;
+    .lwh-spin {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        max-height: 400px;
+        color: $c-theme;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .lwh-spin-dot {
+            position: relative;
+            display: inline-block;
+            font-size: 20px;
+            width: 20px;
+            height: 20px;
+            animation: spinRotate 1.2s infinite linear;
+            transform: rotate(45deg);
+            i {
+                position: absolute;
+                display: block;
+                width: 9px;
+                height: 9px;
+                background-color: $c-theme;
+                border-radius: 100%;
+                transform: scale(.75);
+                transform-origin: 50% 50%;
+                opacity: .3;
+                animation: spinMove 1s infinite linear alternate;
+                &:nth-child(1) {
+                    top: 0;
+                    left: 0;
+                }
+                &:nth-child(2) {
+                    animation-delay: .4s;
+                    top: 0;
+                    right: 0;
+                }
+                &:nth-child(3) {
+                    animation-delay: .8s;
+                    right: 0;
+                    bottom: 0;
+                }
+                &:nth-child(4) {
+                    animation-delay: 1.2s;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+        .lwh-spin-text {
+            padding-top: 10px;
+            text-shadow: 0 1px 2px #fff;
+        }
+        .lwh-spin-small {
+            width: 14px;
+            height: 14px;
+            i {
+                width: 5px;
+                height: 5px;
+            }
+        }
+        .lwh-spin-large {
+            width: 32px;
+            height: 32px;
+            i {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    };
+    .lwh-spin-content {
+        position: relative;
+        transition: opacity .3s;
+    }
+    .lwh-spin-blur {
+        clear: both;
+        overflow: hidden;
+        opacity: .5;
+    }
+    @keyframes spinMove {
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes spinRotate {
+        100% {
+            transform: rotate(405deg);
+        }
+    }
+}
+
+.lwh-spin-inline {
+    display: inline-block;
+    .lwh-spin {
+        position: relative;
+    }
+
+}

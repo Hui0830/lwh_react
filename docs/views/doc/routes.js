@@ -37,18 +37,25 @@ const Routers = () => (
         {/**  REPLACE MARKDOWN */}
 
             <Route
+                path="/packages/block"
                 component={Loadable({
                     loader: () => import('packages/block/demo/index'),
                     loading: Loading
                 })}
-                path="/packages/block"
             />
             <Route
+                path="/packages/button"
                 component={Loadable({
                     loader: () => import('packages/button/demo/index'),
                     loading: Loading
                 })}
-                path="/packages/button"
+            />
+            <Route
+                path="/packages/spin"
+                component={Loadable({
+                    loader: () => import('packages/spin/demo/index'),
+                    loading: Loading
+                })}
             />
     </Switch>
 )
