@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'back-stage',      //应用名
+      name: 'lwh_react',      //应用名
       script: './docs/server/server.run.js',   //应用文件位置
       env: {
         //PM2_SERVE_PATH: './dist',    //静态服务路径
@@ -16,7 +16,6 @@ module.exports = {
       exec_mode: 'fork',
       min_uptime: '30s',
       max_restarts: 10,
-      //cron_restart: "40",
       watch:[
         'docs'
       ],  //监听模式，不能单纯的设置为true，易导致无限重启，因为日志文件在变化，需要排除对其的监听
@@ -28,9 +27,9 @@ module.exports = {
         user: 'root',                      //ssh 登陆服务器用户名
         host: '106.12.132.188',              //ssh 地址
         ref: 'origin/master',             //Git远程/分支
-        repo: 'git@github.com:Hui0830/xym-back.git',   //git地址
-        path: '/liwenhui/back-stage',       //服务器文件路径
-        'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production'  //部署后的动作
+        repo: 'git@github.com:Hui0830/lwh_react.git',   //git地址
+        path: '/liwenhui/lwh_react',       //服务器文件路径
+        'post-deploy': 'npm install && npm run build:pro pm2 reload ecosystem.config.js --env production'  //部署后的动作
       }
   }
 };

@@ -1,15 +1,15 @@
 {
   "name": "lwh_react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
   "files": [
     "lib"
   ],
   "scripts": {
-    "start": "rm -rf lib && npm run build && npm run server",
+    "publish": "rm -rf lib && npm run build && npm publish",
     "dev": "webpack-dev-server --progress --colors --profile --config build/webpack.config.dev.js ",
     "build:pro": "webpack --progress --colors --profile --config build/webpack.config.prod.js --profile --json > stats.json",
-    "server": "node docs/server/server.run.js",
+    "server": "npm run build:pro && node docs/server/server.run.js",
     "add:package": "node build/package.create.js",
     "build:other-entry": "node build/publish_build/build_other_entry.js",
     "build:component-entry": "node build/publish_build/create_components_entry.js > build/publish_build/components_entry.json",
