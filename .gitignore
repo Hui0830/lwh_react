@@ -1,5 +1,4 @@
 package-lock.json
-docs/dist*
 dist
 node_modules*
 stats.json
