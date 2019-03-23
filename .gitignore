@@ -1,5 +1,4 @@
 package-lock.json
-./dist
 node_modules*
 stats.json
 .cache-loader*

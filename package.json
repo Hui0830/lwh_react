@@ -8,7 +8,7 @@
   "scripts": {
     "publish": "rm -rf lib && npm run build && npm publish",
     "dev": "webpack-dev-server --progress --colors --profile --config build/webpack.config.dev.js ",
-    "build:pro": "webpack --progress --colors --profile --config build/webpack.config.prod.js --profile --json > stats.json",
+    "build:pro": "rm -rf docs/dist && webpack --progress --colors --profile --config build/webpack.config.prod.js --profile --json > stats.json",
     "server": "npm run build:pro && node docs/server/server.run.js",
     "add:package": "node build/package.create.js",
     "build:other-entry": "node build/publish_build/build_other_entry.js",
