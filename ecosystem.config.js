@@ -29,7 +29,7 @@ module.exports = {
         ref: 'origin/master',             //Git远程/分支
         repo: 'git@github.com:Hui0830/lwh_react.git',   //git地址
         path: '/liwenhui/lwh_react',       //服务器文件路径
-        'post-deploy': 'npm install && npm run build:pro pm2 reload ecosystem.config.js --env production'  //部署后的动作
+        'post-deploy': 'npm install && npm run build:pro && pm2 reload ecosystem.config.js --env production'  //部署后的动作
       }
   }
 };
