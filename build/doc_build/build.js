@@ -8,7 +8,7 @@ module.exports = function(type = 'doc') {
         content = files.map(file => {
             return (`
             <Route
-                path= "/packages/${file}"
+                path="/packages/${file}"
                 component={Loadable({
                     loader: () => import('packages/${file}/demo/index'),
                     loading: Loading

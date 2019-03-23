@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
+const HappyPack = require('happypack');
 
 module.exports = {
     entry: {
@@ -12,18 +13,24 @@ module.exports = {
         alias: {
             packages: path.join(__dirname, '../packages'),
             markdown: path.join(__dirname, '../docs/markdown'),
-            components: path.join(__dirname, '../docs/views/components')
+            components: path.join(__dirname, '../docs/views/components'),
+            lwh_react: path.join(__dirname, '../packages/index.js')
         }
     },
     module: {
         rules: [
+            // {
+            //     test: /\.js|\.jsx$/,
+            //     exclude: [
+			// 		path.resolve(__dirname,'../node_modules')
+			// 	],
+            //     use: ['babel-loader?cacheDirectory'],
+            // },
             {
-                test: /\.js|\.jsx$/,
-                exclude: [
-					path.resolve(__dirname,'../node_modules')
-				],
-                use: ['babel-loader'],
-            },
+				test: /\.(js|jsx)$/,
+				use: ['happypack/loader?id=babel'],
+				exclude: /(node_modules)/,
+			},
             {
                 test: /\.md$/,
                 loader: 'babel-loader!react-markdown-loader',
@@ -69,6 +76,13 @@ module.exports = {
               },
             }
         }),
+        // happypack并行处理
+		new HappyPack({
+			// 用唯一ID来代表当前HappyPack是用来处理一类特定文件的，与rules中的use对应
+			id: 'babel',
+			loaders: ['babel-loader?cacheDirectory'],
+			//threadPool: happyThreadPool
+		}),
         new HtmlWebpackPlugin({
             alwaysWriteToDisk: true,
             chunks: ['manifest', 'vendor','doc'],

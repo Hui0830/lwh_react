@@ -1,5 +1,8 @@
 package-lock.json
 docs/dist*
+dist
 node_modules*
+stats.json
 .cache-loader*
+.cache
 .vscode*

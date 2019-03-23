@@ -35,23 +35,30 @@ const Routers = () => (
             path="/markdown/log"
         />
         {/**  REPLACE MARKDOWN */}
-
+        
             <Route
-                path="/packages/block"
+                path= "/packages/block"
                 component={Loadable({
                     loader: () => import('packages/block/demo/index'),
                     loading: Loading
                 })}
             />
             <Route
-                path="/packages/button"
+                path= "/packages/button"
                 component={Loadable({
                     loader: () => import('packages/button/demo/index'),
                     loading: Loading
                 })}
             />
             <Route
-                path="/packages/spin"
+                path= "/packages/modal"
+                component={Loadable({
+                    loader: () => import('packages/modal/demo/index'),
+                    loading: Loading
+                })}
+            />
+            <Route
+                path= "/packages/spin"
                 component={Loadable({
                     loader: () => import('packages/spin/demo/index'),
                     loading: Loading

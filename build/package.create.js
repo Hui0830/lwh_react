@@ -19,6 +19,7 @@ const replaceContent = () => {
             path.join(packagePath, 'index.jsx'),
             path.join(packagePath, 'index.scss'),
             path.join(packagePath, 'demo/index.jsx'),
+            path.join(packagePath, 'demo/base.jsx'),
             path.join(packagePath, 'demo/index.md'),
             path.join(packagePath, 'demo/index.scss'),
         ],

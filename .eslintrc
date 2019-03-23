@@ -15,7 +15,7 @@
         "react"
     ],
     "globals": {
-        "System": true,
+        "console": true,
         "document": true,
         "module": true,
         "require": true
