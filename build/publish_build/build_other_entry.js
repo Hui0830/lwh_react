@@ -10,7 +10,7 @@ function compile(dir) {
             if (/\/demo$/.test(absolutePath)) return;
             return compile(absolutePath);
         }
-        if (/\.js|\.jsx$/.test(file)) {
+        if (/\.js$/.test(file)) {
             const content = fs.readFileSync(absolutePath, 'utf-8');
             const outputPath = absolutePath.replace('packages', 'lib');
             fs.outputFileSync(outputPath, content);

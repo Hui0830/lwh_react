@@ -1,4 +1,5 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const components_entry = require('./components_entry.json');
 
@@ -15,11 +16,7 @@ const extractSCSS = new MiniCssExtractPlugin({
 module.exports = {
   mode: 'production',
   entry: components_entry,
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDom',
-    'prop-types': 'propTypes',
-  },
+  externals: [nodeExternals()],
   output: {
     path: resolve('lib'),
     filename: '[name]/index.js',
