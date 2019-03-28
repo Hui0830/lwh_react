@@ -17,7 +17,7 @@ const extractSCSS = new MiniCssExtractPlugin({
 module.exports = merge(webpackBase, {
     mode: 'production',
     output: {
-        publicPath: '/',
+        publicPath: './',
         path: path.join(__dirname, '../docs/dist'), // 打包后的文件存放的地方
         filename: "js/[name].[chunkhash:8].js",
 		chunkFilename: "js/[name]-[id].[chunkhash:8].js",
@@ -26,12 +26,6 @@ module.exports = merge(webpackBase, {
         rules: [
             {
                 test: /\.(scss|css)$/,
-                // use: [
-                //   MiniCssExtractPlugin.loader,
-                //   'css-loader',
-                //   'postcss-loader',
-                //   'sass-loader',
-                // ],
                 use: [MiniCssExtractPlugin.loader,'happypack/loader?id=css'],
                 exclude: path.resolve(__dirname,' ../node_modules'),
             },
