@@ -37,7 +37,7 @@
   "bugs": {
     "url": "https://github.com/Hui0830/lwh_react/issues"
   },
-  "homepage": "https://Hui0830.github.io/lwh_react",
+  "homepage": "https://hui0830.github.io/lwh_react",
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "autoprefixer": "^9.4.9",
