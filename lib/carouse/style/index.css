@@ -1,0 +1,88 @@
+.lwh-pirate-carouse {
+  position: relative;
+  overflow: hidden; }
+  .lwh-pirate-carouse .lwh-carousel-warp {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    transition: all .3s ease-in-out; }
+    .lwh-pirate-carouse .lwh-carousel-warp .lwh-carousel-item {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .lwh-pirate-carouse .lwh-carousel-warp .lwh-carousel-item img {
+        width: 100%;
+        height: auto; }
+  .lwh-pirate-carouse .lwh-carousel-fade {
+    outline: none;
+    opacity: 1; }
+    .lwh-pirate-carouse .lwh-carousel-fade .lwh-carousel-item {
+      position: relative;
+      display: block;
+      opacity: 0;
+      transition: opacity 700ms ease 0s, visibility 700ms ease 0s; }
+  .lwh-pirate-carouse .lwh-carousel-icon {
+    height: 20px;
+    line-height: 20px;
+    padding-right: 20px;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box; }
+    .lwh-pirate-carouse .lwh-carousel-icon .lwh-tab {
+      display: inline-block;
+      margin-right: 10px;
+      height: 8px;
+      width: 8px;
+      color: #FBAB0A;
+      border-radius: 5px;
+      border: 1px solid;
+      transition: all .3s ease-in-out;
+      cursor: pointer; }
+      .lwh-pirate-carouse .lwh-carousel-icon .lwh-tab:hover {
+        background-color: #ffc570; }
+    .lwh-pirate-carouse .lwh-carousel-icon .lwh-activeTab {
+      background: #FBAB0A; }
+  .lwh-pirate-carouse .lwh-bottom-left {
+    text-align: left;
+    bottom: 10px;
+    padding-left: 20px; }
+  .lwh-pirate-carouse .lwh-bottom-center {
+    text-align: center;
+    bottom: 10px;
+    left: 0; }
+  .lwh-pirate-carouse .lwh-bottom-right {
+    text-align: right;
+    bottom: 10px;
+    padding-right: 20px; }
+  .lwh-pirate-carouse .lwh-top-left {
+    text-align: left;
+    top: 10px;
+    padding-left: 20px; }
+  .lwh-pirate-carouse .lwh-top-right {
+    text-align: right;
+    top: 10px;
+    padding-right: 20px; }
+  .lwh-pirate-carouse .lwh-right {
+    text-align: center;
+    top: 50%;
+    right: 10px;
+    height: auto;
+    width: 20px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .lwh-pirate-carouse .lwh-left {
+    text-align: center;
+    top: 50%;
+    left: 10px;
+    height: auto;
+    width: 20px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+
+.lwh-carousel-vertical {
+  position: relative;
+  overflow: hidden; }
+  .lwh-carousel-vertical .lwh-carousel-warp {
+    flex-wrap: wrap; }
+

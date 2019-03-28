@@ -1,0 +1,105 @@
+
+.lwh-pirate-carouse {
+    position: relative;
+    overflow: hidden;
+    .lwh-carousel-warp {
+        display: flex;
+        overflow: hidden;
+        flex-wrap: nowrap;
+        transition: all .3s ease-in-out;
+        .lwh-carousel-item {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .lwh-carousel-fade {
+        outline: none;
+        opacity: 1;
+        .lwh-carousel-item {
+            position: relative;
+            display: block;
+            opacity: 0;
+            transition: opacity 700ms ease 0s, visibility 700ms ease 0s;
+        }
+    }
+    .lwh-carousel-icon {
+        height: 20px;
+        line-height: 20px;
+        padding-right: 20px;
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        .lwh-tab {
+            display: inline-block;
+            margin-right: 10px;
+            height: 8px;
+            width: 8px;
+            color: #FBAB0A;
+            border-radius: 5px;
+            border: 1px solid;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                background-color: #ffc570
+            }
+        }
+        .lwh-activeTab{
+            background: #FBAB0A;
+        }
+    }
+    .lwh-bottom-left {
+        text-align: left;
+        bottom: 10px;
+        padding-left: 20px;
+    }
+    .lwh-bottom-center {
+        text-align: center;
+        bottom: 10px;
+        left: 0;
+    }
+    .lwh-bottom-right {
+        text-align: right;
+        bottom: 10px;
+        padding-right: 20px;
+    }
+    .lwh-top-left {
+        text-align: left;
+        top: 10px;
+        padding-left: 20px;
+    }
+    .lwh-top-right {
+        text-align: right;
+        top: 10px;
+        padding-right: 20px;
+    }
+    .lwh-right {
+        text-align: center;
+        top: 50%;
+        right: 10px;
+        height: auto;
+        width: 20px;
+        transform: translateY(-50%)
+    }
+    .lwh-left {
+        text-align: center;
+        top: 50%;
+        left: 10px;
+        height: auto;
+        width: 20px;
+        transform: translateY(-50%)
+    }
+}
+
+.lwh-carousel-vertical {
+    position: relative;
+    overflow: hidden;
+    .lwh-carousel-warp{
+        flex-wrap: wrap
+    }
+}

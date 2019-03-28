@@ -37,28 +37,49 @@ const Routers = () => (
         {/**  REPLACE MARKDOWN */}
         
             <Route
-                path= "/packages/block"
+                path="/packages/Tabs"
+                component={Loadable({
+                    loader: () => import('packages/Tabs/demo/index'),
+                    loading: Loading
+                })}
+            />
+            <Route
+                path="/packages/block"
                 component={Loadable({
                     loader: () => import('packages/block/demo/index'),
                     loading: Loading
                 })}
             />
             <Route
-                path= "/packages/button"
+                path="/packages/button"
                 component={Loadable({
                     loader: () => import('packages/button/demo/index'),
                     loading: Loading
                 })}
             />
             <Route
-                path= "/packages/modal"
+                path="/packages/carouse"
+                component={Loadable({
+                    loader: () => import('packages/carouse/demo/index'),
+                    loading: Loading
+                })}
+            />
+            <Route
+                path="/packages/icon"
+                component={Loadable({
+                    loader: () => import('packages/icon/demo/index'),
+                    loading: Loading
+                })}
+            />
+            <Route
+                path="/packages/modal"
                 component={Loadable({
                     loader: () => import('packages/modal/demo/index'),
                     loading: Loading
                 })}
             />
             <Route
-                path= "/packages/spin"
+                path="/packages/spin"
                 component={Loadable({
                     loader: () => import('packages/spin/demo/index'),
                     loading: Loading

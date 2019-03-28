@@ -53,7 +53,7 @@ module.exports = {
 				],
             },
             {
-				test: /\.(png|jpg|jpeg|gif|ttf|eot|woff|svg|woff2|swf)$/i,
+				test: /\.(png|jpg|jpeg|svg|ico)$/i,
 				use: [
 					{
 						loader: 'file-loader',
@@ -89,7 +89,7 @@ module.exports = {
             filename: 'index.html',
             template: path.join(__dirname, "../docs/views/doc.html"),
             inject: 'body',
-			favicon: './favicon.ico',
+			favicon:  path.join(__dirname,'../favicon.ico'),
         }),
         new HtmlWebpackHarddiskPlugin()
     ],

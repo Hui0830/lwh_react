@@ -61,7 +61,7 @@ module.exports = merge(webpackBase, {
         },
         minimizer: [
 			new ParallelUglifyPlugin({
-				cacheDir: '.cache/',
+				cacheDir: '.cache/', //缓存压缩
 				uglifyJS:{
 					output: {
 						 // 是否输出可读性较强的代码，即会保留空格和制表符，默认为输出，为了达到更好的压缩效果，可以设置为false
@@ -75,7 +75,9 @@ module.exports = merge(webpackBase, {
 						//是否删除代码中所有的console语句，默认为不删除，开启后，会删除所有的console语句
 						drop_console: true,
 						//是否内嵌虽然已经定义了，但是只用到一次的变量，比如将 var x = 1; y = x, 转换成 y = 1, 默认为否
-						collapse_vars: true,
+                        collapse_vars: true,
+                        // 提取出现多次但是没有定义成变量去引用的静态值
+                        reduce_vars:true
 					}
 				},
 			}),

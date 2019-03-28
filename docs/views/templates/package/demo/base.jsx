@@ -1,7 +1,7 @@
 import React,{ PureComponent } from 'react';
 import { lwh_upperName } from 'lwh_react';
 
-export default class baseModal extends PureComponent {
+export default class baselwh_upperName extends PureComponent {
     state = {
         visible: false
     }
@@ -22,7 +22,7 @@ export const baseCode = {
     import React,{ PureComponent } from 'react';
     import { lwh_upperName } from 'lwh_react';
 
-    export default class baseModal extends PureComponent {
+    export default class baselwh_upperName extends PureComponent {
         state = {
             visible: false
         }

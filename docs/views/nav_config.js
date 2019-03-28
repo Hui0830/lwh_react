@@ -17,6 +17,6 @@ export default {
         /**  REPLACE MARKDOWN */
     ],
     packages: [
-        { name: 'block', path: '/packages/block' },{ name: 'button', path: '/packages/button' },{ name: 'modal', path: '/packages/modal' },{ name: 'spin', path: '/packages/spin' }
+        { name: 'Tabs', path: '/packages/Tabs' },{ name: 'block', path: '/packages/block' },{ name: 'button', path: '/packages/button' },{ name: 'carouse', path: '/packages/carouse' },{ name: 'icon', path: '/packages/icon' },{ name: 'modal', path: '/packages/modal' },{ name: 'spin', path: '/packages/spin' }
     ]
 };

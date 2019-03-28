@@ -3,7 +3,7 @@ import Block from 'packages/block';
 import Md from './index.md';
 
 import './index.scss'
-import Base,{baseCode} from '../index';
+import Base,{baseCode} from './base';
 
 const Code = ({title, code}) => {
     return <div className="code-container">
