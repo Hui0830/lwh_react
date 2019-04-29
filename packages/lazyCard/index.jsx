@@ -1,5 +1,5 @@
 import React,{PureComponent} from 'react';
-import {Icon} from '../icon';
+import Icon from '../icon';
 import PropTypes from 'prop-types';
 
 import lazy from './lazy'
@@ -23,6 +23,7 @@ class LazyCard extends PureComponent{
     constructor(props) {
         super(props);
         this.lazyRef = React.createRef();
+        this.imgObj = null;
     }
 
     state = {
@@ -31,7 +32,7 @@ class LazyCard extends PureComponent{
 
     componentDidMount() {
         // 监听Scroll事件
-        // this.lazyLoad();
+        this.lazyLoad();
         let _this = this;
         const lazyScroll = lazy(_this.lazyLoad,800)
         // eslint-disable-next-line no-undef
@@ -42,7 +43,7 @@ class LazyCard extends PureComponent{
         document.removeEventListener('scroll',()=>{console.log('remove')})
     }
     lazyLoad = () => {
-        if(this.state.show) {
+        if(this.state.show || this.imgObj) {
             return
         }
         // 获取可视区域的高度
@@ -56,6 +57,7 @@ class LazyCard extends PureComponent{
             // eslint-disable-next-line no-undef
             new Promise((resolve) => {
                 let img = new Image();
+                this.imgObj = img;
                 img.onload = function(){
                     resolve(img)
                 }
@@ -85,11 +87,9 @@ class LazyCard extends PureComponent{
                 {
                     mask && <div className="lwh-lazy-mask">
                         <div className="lwh-lazy-top">
-                            
-                                <span className="lwh-lazy-icon">
-                                    {icon}
-                                </span>
-                            
+                            <span className="lwh-lazy-icon">
+                                {icon}
+                            </span>
                         </div>
                         <div className="lwh-lazy-content">
                             {children || '这里是图片描述这里是图片描述这里是图片描述这里是图片描述这里是图片描述这里是图片描述这里是图片描述这里是图片描述这里是图片描述这里是图片描述这里是图片描述这里是图片描述这里是图片描述'}
