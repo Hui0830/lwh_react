@@ -1,4 +1,5 @@
 import React from 'react';
+import Code from 'components/code'
 import Block from 'packages/block';
 import Md from './index.md';
 
@@ -6,12 +7,6 @@ import './index.scss'
 import Base,{baseCode} from './base';
 import Fade,{fadeCode} from './fade';
 
-const Code = ({title, code}) => {
-    return <div className="code-container">
-        {title &&  <p className="code-title">{title}</p>}
-        <code>{code}</code>
-    </div>
-}
 
 // eslint-disable-next-line
 const CarouseDemo = () => (

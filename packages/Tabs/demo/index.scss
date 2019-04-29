@@ -1,3 +1,11 @@
 .Tabs-demo {
-
+    p{
+        margin: 0
+    }
+    .demo-tab-content {
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
 }

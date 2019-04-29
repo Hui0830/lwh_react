@@ -1,155 +1,23 @@
-
 @import '../scss/common.scss';
 .doc-app {
-    display: flex;
-    &-left {
-        width: 240px;
-        padding-top: 40px;
-        position: fixed;
-        height: 100%;
-        left: 0;
-        top: 0;
-        overflow-y: auto;
-        min-height: 200px;
-    }
-    &-doc {
-        flex: 1;
-        padding-top: 10px;
-        margin-left: 240px;
-        margin-right: 40px;
-        min-height: 200px;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    &-doc {
-          
-          p, ul ,ol, pre, blockquote, hr {
-              margin-bottom: 1.2em;
-          }
-            
-          p{
-            letter-spacing: 1px !important;
-            line-height: 1.7 !important;
-            min-height: 1em !important;
-            box-sizing: border-box !important;
-            word-wrap: break-word !important;
-            text-align: justify;
-          }
-          
-          blockquote {
-              border-left: 1px solid #1DABB8;
-              padding: 0 15px !important;
-              color: #777777;
-              margin: 0px;
-              margin-left: 15px;
-          }
-          
-          strong {
-              font-weight: normal;
-          }
-          
-          h1,h2,h3,h4,h5,h6 {
-              word-break: break-all !important;
-              text-align: left;
-              font-weight: bolder;
-              margin-top: 1em;
-              margin-bottom: .6em;
-              margin-left: 0;
-              line-height: 1.35;
-              padding-left: 0;
-          }
-          
-          h1 {
-              font-size: 2.0em !important;
-          }
-          
-          h2 {
-              font-size: 1.8em !important;
-          }
-          
-          h3 {
-              font-size: 1.6em !important;
-          }
-          
-          h4 {
-              font-size: 1.4em !important;
-          }
-          
-          h5 {
-              font-size: 1.2em !important;
-          }
-
-          h6 {
-            font-size: 1.1em !important;
-            }
-          
-          a {
-            color: #333 !important;
-            text-decoration: none;
-            border-bottom: 1px solid #1abc9c;
-          }
-          
-          ul, ol {
-            padding-left: 30px;
-          }
-          
-          li {
-            line-height: 24px;
-            list-style: disc;
-          }
-          
-          hr {
-              width: 60%;
-              margin: 20px 0 40px;
-              background-image: -webkit-linear-gradient(0deg,#d5d5d5,#d5d5d5,rgba(0, 0, 0, 0));
-              height: 1px;
-              border: 0;
-          }
-          
-          table {
-            width: 100%;
-            font-size: 13px;
-            line-height: 1.5;
-            margin-bottom: 40px;
-            background-color: #fff;
-            border-collapse: collapse;
-            color: #34495e;
-          }
-          th {
-            padding: 8px 10px;
-            text-align: left;
-            font-weight: 400;
-            background-color: #f5f7fa;
-            border: 1px solid #eaeefb;
-          }
-          td {
-            padding: 8px;
-            border: 1px solid #eaeefb;
-          }
-
-          pre {
-            border-radius: 3px;
-            word-wrap: break-word;
-            overflow: auto;
-            font-size: 13px;
-          }
-
-          code {
-            margin-bottom: 0;
-            display: block;
-            font-size: 13px;
-            overflow-x: auto;
-            font-weight: 400;
-            line-height: 22px;
-            border-radius: 3px;
-            margin-bottom: 25px;
-            position: relative;
-            word-break: break-all;
-            white-space: pre-wrap;
-            background-color: #f5f7fa;
-            color: #455a64;
-            padding: 18px 10px 18px 20px;
-            font-family: Source Code Pro,Monaco,Inconsolata,monospace;
-          }
-    }
+  display: flex;
+  &-left {
+    width: 240px;
+    padding-top: 40px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    min-height: 200px;
+  }
+  &-doc {
+    flex: 1;
+    padding-top: 10px;
+    margin-left: 240px;
+    margin-right: 40px;
+    min-height: 200px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }

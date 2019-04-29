@@ -39,7 +39,7 @@ class Block extends React.PureComponent {
         return (
             <div className={`lwh-pirate-block ${className}`}>
                 {title && <h3>{title}</h3>}
-                {discript && <p>{discript}</p>}
+                {discript && <p className="lwh-block-discript">{discript}</p>}
                 <div className={`lwh-pirate-block-container ${className}`}>
                     <div className="lwh-block-source" ref={this.child}>
                         {children || '未设置组件内容'}

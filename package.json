@@ -21,7 +21,7 @@
     "server:publish:first": "npm run server:setup && pm2 deploy ecosystem.config.js production",
     "server:publish": "pm2 deploy ecosystem.config.js production",
     "see": "webpack-bundle-analyzer stats.json -p 8888",
-    "predeploy": "npm run build:pro", 
+    "predeploy": "npm run build:pro",
     "deploy": "gh-pages -d ./docs/dist"
   },
   "description": "react 常用业务组件库",
