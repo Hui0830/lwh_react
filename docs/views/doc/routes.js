@@ -72,6 +72,13 @@ const Routers = () => (
                 })}
             />
             <Route
+                path="/packages/lazyCard"
+                component={Loadable({
+                    loader: () => import('packages/lazyCard/demo/index'),
+                    loading: Loading
+                })}
+            />
+            <Route
                 path="/packages/modal"
                 component={Loadable({
                     loader: () => import('packages/modal/demo/index'),

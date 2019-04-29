@@ -1,0 +1,88 @@
+.lwh-lazy-show {
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.1);
+}
+.lwh-lazy-loadding {
+    background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+    background-size: 400% 100%;
+    animation: loadding 1.4s ease infinite;
+}
+.lwh-pirate-lazyCard {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    .lwh-lazy-image {
+        width: 100%;
+        height: auto;
+    }
+    .lwh-lazy-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 300px;
+        border-radius: 9px;
+        background-color: rgba(0,0,0,.5);
+        color: #fff;
+        display: none;
+        .lwh-lazy-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            flex-wrap: wrap;
+            float: right;
+            .lwh-lazy-icon {
+                width: 32px;
+                height: 32px;
+                line-height: 30px;
+                background: #fff;
+                border-radius: 50%;
+                color: #555;
+                text-align: center;
+                font-size: 16px;
+                margin-top: 10px;
+            }
+        }
+        .lwh-lazy-content {
+            position: absolute;
+            bottom: 0;
+            padding: 10px;
+            overflow: hidden;
+            height: 62px;
+            cursor: pointer;
+
+        }
+    }
+    &:hover {
+        .lwh-lazy-mask {
+            display: block
+        }
+        animation: hover .3s linear forwards;;
+    }
+    @keyframes hover {
+        0% {
+            box-shadow: 0 0 18px 0 rgba(0,0,0,.05);
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+        100% {
+            box-shadow: 0 0 30px 0 rgba(0,0,0,.1);
+            margin-top: -2px;
+            margin-bottom: 26px;
+        }
+    }
+    @keyframes loadding {
+        0% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0 50%;
+        }
+    }
+}
