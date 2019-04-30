@@ -2,7 +2,7 @@
   "name": "lwh_react",
   "version": "0.1.4",
   "main": "lib/index.js",
-  "private": true,
+  "private": false,
   "files": [
     "lib"
   ],
